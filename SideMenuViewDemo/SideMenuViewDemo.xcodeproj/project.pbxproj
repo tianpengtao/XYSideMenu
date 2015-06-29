@@ -14,9 +14,9 @@
 		9488F97E1B3D01CB003313FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9488F97D1B3D01CB003313FA /* Images.xcassets */; };
 		9488F9811B3D01CB003313FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9488F97F1B3D01CB003313FA /* LaunchScreen.xib */; };
 		9488F98D1B3D01CB003313FA /* SideMenuViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9488F98C1B3D01CB003313FA /* SideMenuViewDemoTests.m */; };
-		9488F99C1B3D0290003313FA /* XYSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9488F99B1B3D0290003313FA /* XYSideMenuView.m */; };
 		9488F99F1B3D2794003313FA /* LeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9488F99E1B3D2794003313FA /* LeftView.m */; };
 		9488F9A21B3D27AB003313FA /* CenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9488F9A11B3D27AB003313FA /* CenterView.m */; };
+		94A57A0D1B40F599003F67A7 /* XYSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A57A0C1B40F599003F67A7 /* XYSideMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +43,12 @@
 		9488F9861B3D01CB003313FA /* SideMenuViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SideMenuViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9488F98B1B3D01CB003313FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9488F98C1B3D01CB003313FA /* SideMenuViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewDemoTests.m; sourceTree = "<group>"; };
-		9488F99A1B3D0290003313FA /* XYSideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSideMenuView.h; sourceTree = "<group>"; };
-		9488F99B1B3D0290003313FA /* XYSideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSideMenuView.m; sourceTree = "<group>"; };
 		9488F99D1B3D2794003313FA /* LeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftView.h; sourceTree = "<group>"; };
 		9488F99E1B3D2794003313FA /* LeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftView.m; sourceTree = "<group>"; };
 		9488F9A01B3D27AB003313FA /* CenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterView.h; sourceTree = "<group>"; };
 		9488F9A11B3D27AB003313FA /* CenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterView.m; sourceTree = "<group>"; };
+		94A57A0B1B40F599003F67A7 /* XYSideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSideMenuView.h; sourceTree = "<group>"; };
+		94A57A0C1B40F599003F67A7 /* XYSideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSideMenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 		9488F9641B3D01CA003313FA = {
 			isa = PBXGroup;
 			children = (
-				9488F9961B3D0203003313FA /* SideMenu */,
+				94A57A0A1B40F599003F67A7 /* SideMenu */,
 				9488F96F1B3D01CA003313FA /* SideMenuViewDemo */,
 				9488F9891B3D01CB003313FA /* SideMenuViewDemoTests */,
 				9488F96E1B3D01CA003313FA /* Products */,
@@ -133,14 +133,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9488F9961B3D0203003313FA /* SideMenu */ = {
+		94A57A0A1B40F599003F67A7 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				9488F99A1B3D0290003313FA /* XYSideMenuView.h */,
-				9488F99B1B3D0290003313FA /* XYSideMenuView.m */,
+				94A57A0B1B40F599003F67A7 /* XYSideMenuView.h */,
+				94A57A0C1B40F599003F67A7 /* XYSideMenuView.m */,
 			);
 			name = SideMenu;
-			path = SideMenuViewDemo/SideMenu;
+			path = ../SideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +246,9 @@
 				9488F99F1B3D2794003313FA /* LeftView.m in Sources */,
 				9488F9A21B3D27AB003313FA /* CenterView.m in Sources */,
 				9488F9791B3D01CA003313FA /* ViewController.m in Sources */,
-				9488F99C1B3D0290003313FA /* XYSideMenuView.m in Sources */,
 				9488F9761B3D01CA003313FA /* AppDelegate.m in Sources */,
 				9488F9731B3D01CA003313FA /* main.m in Sources */,
+				94A57A0D1B40F599003F67A7 /* XYSideMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +443,7 @@
 				9488F9921B3D01CB003313FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9488F9931B3D01CB003313FA /* Build configuration list for PBXNativeTarget "SideMenuViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +452,7 @@
 				9488F9951B3D01CB003313FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
