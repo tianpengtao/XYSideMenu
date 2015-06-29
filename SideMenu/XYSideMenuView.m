@@ -10,6 +10,8 @@
 @interface XYSideMenuView()<UIScrollViewDelegate>
 @property(nonatomic,strong)UIScrollView *scrollView;
 @end
+
+
 @implementation XYSideMenuView
 + (XYSideMenuView *)containerWithCenterView:(id)centerView
                                leftMenuView:(id)leftMenuView
