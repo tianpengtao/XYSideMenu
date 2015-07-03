@@ -17,7 +17,6 @@ typedef enum {
 @property(nonatomic,strong)UIView *centerView;
 @property (nonatomic, assign) XYSideMenuState menuState;
 
-+ (XYSideMenuView *)containerWithCenterView:(id)centerView
-                               leftMenuView:(id)leftMenuView
-                                      frame:(CGRect)frame;
++ (XYSideMenuView *)containerWithCenterView:(UIView*)centerView
+                               leftMenuView:(UIView*)leftMenuView;
 @end

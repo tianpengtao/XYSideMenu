@@ -13,12 +13,12 @@
 
 
 @implementation XYSideMenuView
-+ (XYSideMenuView *)containerWithCenterView:(id)centerView
-                               leftMenuView:(id)leftMenuView
-                                      frame:(CGRect)frame{
-    XYSideMenuView *sideMenuView = [[XYSideMenuView alloc] initWithFrame:frame];
++ (XYSideMenuView *)containerWithCenterView:(UIView*)centerView
+                               leftMenuView:(UIView*)leftMenuView{
+    XYSideMenuView *sideMenuView = [[XYSideMenuView alloc] initWithFrame:centerView.bounds];
     sideMenuView.leftMenuView = leftMenuView;
     sideMenuView.centerView = centerView;
+    sideMenuView.leftMenuWidth=CGRectGetWidth(leftMenuView.frame);
     return sideMenuView;
 }
 #pragma mark - life cycle

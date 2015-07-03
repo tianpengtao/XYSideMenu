@@ -20,15 +20,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LeftView *lv=[[LeftView  alloc] init];
+    CGFloat leftMenuWidth=160;
+    LeftView *lv=[[LeftView  alloc] initWithFrame:CGRectMake(0, 0, leftMenuWidth, 400)];
     lv.backgroundColor=[UIColor redColor];
-    
-    CenterView *cv=[[CenterView  alloc] init];
+    CenterView *cv=[[CenterView  alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
     cv.backgroundColor=[UIColor blueColor];
-    sideMenuView=[XYSideMenuView containerWithCenterView:lv
-                                            leftMenuView:cv
-                                                   frame:CGRectMake(0,64,320,200)];
-    sideMenuView.leftMenuWidth=100;
+    sideMenuView=[XYSideMenuView containerWithCenterView:cv
+                                            leftMenuView:lv];
     sideMenuView.menuState=XYSideMenuStateClosed;
     [self.view addSubview:sideMenuView];
     
@@ -36,14 +34,14 @@
     UIButton *openButton=[UIButton buttonWithType:UIButtonTypeCustom];
     [openButton setTitle:@"open" forState:UIControlStateNormal];
     openButton.backgroundColor=[UIColor redColor];
-    openButton.frame=CGRectMake(0, 300, 50, 30);
+    openButton.frame=CGRectMake(0, 410, 50, 30);
     [openButton addTarget:self action:@selector(open) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:openButton];
     
     UIButton *closeButton=[UIButton buttonWithType:UIButtonTypeCustom];
     [closeButton setTitle:@"close" forState:UIControlStateNormal];
     closeButton.backgroundColor=[UIColor redColor];
-    closeButton.frame=CGRectMake(60, 300, 50, 30);
+    closeButton.frame=CGRectMake(60, 410, 50, 30);
     [closeButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
 
     [self.view addSubview:closeButton];

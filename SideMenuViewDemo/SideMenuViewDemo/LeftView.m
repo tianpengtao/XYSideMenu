@@ -9,7 +9,20 @@
 #import "LeftView.h"
 
 @implementation LeftView
-
+-(instancetype)initWithFrame:(CGRect)frame{
+    self=[super initWithFrame:frame];
+    if (self) {
+        [self setupUI];
+    }
+    return self;
+}
+-(void)setupUI{
+    UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor=[UIColor brownColor];
+    CGFloat height=50;
+    button.frame=CGRectMake(10, CGRectGetHeight(self.frame)-height, CGRectGetWidth(self.frame)-20, height);
+    [self addSubview:button];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
