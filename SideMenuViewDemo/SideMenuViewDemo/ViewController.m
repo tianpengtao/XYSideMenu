@@ -21,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     CGFloat leftMenuWidth=160;
+    
+    
+    
     LeftView *lv=[[LeftView  alloc] initWithFrame:CGRectMake(0, 0, leftMenuWidth, 400)];
     lv.backgroundColor=[UIColor redColor];
     CenterView *cv=[[CenterView  alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
