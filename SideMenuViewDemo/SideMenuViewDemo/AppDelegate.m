@@ -4,7 +4,12 @@
 //
 //  Created by 田 on 15/6/26.
 //  Copyright (c) 2015年 田. All rights reserved.
-//
+// set the new tag to 1.0.3
+//set the new version to 1.0.3
+//pod repo add master https://github.com/CocoaPods/Specs.git
+//git add -A && git commit -m "Release 2.0."
+//pod trunk push XYSideMenu.podspec
+
 
 #import "AppDelegate.h"
 
