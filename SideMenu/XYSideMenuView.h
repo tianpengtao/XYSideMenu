@@ -12,7 +12,6 @@ typedef enum {
     XYSideMenuStateLeftMenuOpen
 } XYSideMenuState;
 @interface XYSideMenuView : UIView
-@property (nonatomic, assign) CGFloat leftMenuWidth;
 @property(nonatomic,strong)UIView *leftMenuView;
 @property(nonatomic,strong)UIView *centerView;
 @property (nonatomic, assign) XYSideMenuState menuState;

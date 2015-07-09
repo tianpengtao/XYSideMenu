@@ -9,6 +9,7 @@
 #import "XYSideMenuView.h"
 @interface XYSideMenuView()<UIScrollViewDelegate>
 @property(nonatomic,strong)UIScrollView *scrollView;
+@property (nonatomic, assign) CGFloat leftMenuWidth;
 @end
 
 
