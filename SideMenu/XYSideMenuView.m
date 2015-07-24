@@ -9,7 +9,8 @@
 #import "XYSideMenuView.h"
 @interface XYSideMenuView()<UIScrollViewDelegate>
 @property(nonatomic,strong)UIScrollView *scrollView;
-@property (nonatomic, assign) CGFloat leftMenuWidth;
+@property(nonatomic,assign)CGFloat leftMenuWidth;
+@property(nonatomic,strong)UIImageView *alertImageView;
 @end
 
 
@@ -20,6 +21,7 @@
     sideMenuView.leftMenuView = leftMenuView;
     sideMenuView.centerView = centerView;
     sideMenuView.leftMenuWidth=CGRectGetWidth(leftMenuView.frame);
+    
     return sideMenuView;
 }
 #pragma mark - life cycle
@@ -38,18 +40,23 @@
     _scrollView.bounces = NO;
     _scrollView.showsHorizontalScrollIndicator=NO;
     _scrollView.showsVerticalScrollIndicator=NO;
-
     [self addSubview:_scrollView];
-}
+    
+    }
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
     CGFloat offsetX=_scrollView.contentOffset.x;
     if (offsetX>=_leftMenuWidth/2) {
         targetContentOffset->x=_leftMenuWidth;
+        _menuState=XYSideMenuStateClosed;
+
     }else{
         targetContentOffset->x=0;
+        _menuState=XYSideMenuStateLeftMenuOpen;
     }
+    [self showOrHiddenAlert];
+
 }
 #pragma mark - getters and setters
 
@@ -60,6 +67,9 @@
 -(void)setCenterView:(UIView *)centerView{
     _centerView=centerView;
     [_scrollView addSubview:_centerView];
+    
+    self.alertImageView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ab_openAlert"]];
+    [_scrollView addSubview:_alertImageView];
 }
 -(void)setLeftMenuWidth:(CGFloat)leftMenuWidth{
     _leftMenuWidth=leftMenuWidth;
@@ -67,6 +77,7 @@
     
     _centerView.frame=CGRectMake(_leftMenuWidth, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     _scrollView.contentSize=CGSizeMake(_leftMenuWidth+CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+    _alertImageView.frame=CGRectMake(_leftMenuWidth, (CGRectGetHeight(self.frame)-42.5)/2, 7, 42.5);
 }
 -(void)setMenuState:(XYSideMenuState)menuState{
     _menuState=menuState;
@@ -80,8 +91,20 @@
         default:
             break;
     }
+    [self showOrHiddenAlert];
 }
-
+-(void)showOrHiddenAlert{
+    switch (_menuState) {
+        case XYSideMenuStateClosed:
+            _alertImageView.hidden=NO;
+            break;
+        case XYSideMenuStateLeftMenuOpen:
+            _alertImageView.hidden=YES;
+            break;
+        default:
+            break;
+    }
+}
 
 
 @end
