@@ -5,20 +5,16 @@
 //  Created by 田 on 15/6/26.
 //  Copyright (c) 2015年 田. All rights reserved.
 
+//添加并提交
+//git add -A && git commit -m "提交信息"
 
 //打tag
 //git tag 2.0
 //推tag 2.0到远程服务器
-//git push origin 2.0
+//git push --tag
 
-//创建本地tag
-// set the new tag to 1.0.3
 
-//创建本地版本
-//set the new version to 1.0.3
 
-//添加并提交
-//git add -A && git commit -m "提交信息"
 
 //推到cocoaPods官方库中
 //pod trunk push XYSideMenu.podspec
