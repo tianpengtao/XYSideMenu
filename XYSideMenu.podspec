@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "XYSideMenu"
-  s.version      = "2.0"
+  s.version      = "3.0"
   s.summary      = "左右滚动的视图"
   s.homepage     = "https://github.com/tianpengtao/XYSideMenu"
   s.license      = "MIT"
